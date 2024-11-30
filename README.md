@@ -1,151 +1,186 @@
-# HealthBot EVE: Your Personal Health and Wellness Assistant
+# HealthBot EVE: Your Personal Health and Wellness Assistant 🤖💼  
 
-## Features
-HealthBot EVE is a comprehensive, intelligent chatbot designed to provide health and wellness advice, facilitate mathematical evaluations, and manage user interactions. It integrates various capabilities into one seamless platform:
+HealthBot EVE is a comprehensive AI-powered chatbot designed to assist with **health and wellness guidance**, **mathematical evaluations**, and seamless **user interaction management**. It combines the power of artificial intelligence with a user-friendly interface to make health support and calculations accessible anytime, anywhere.
 
-- **Health and Wellness Advice:** EVE provides expert health tips and answers to health-related questions, empowering users to make informed decisions about their well-being.
-  
-- **Mathematical Evaluation:** EVE can evaluate mathematical expressions and return accurate results, offering additional functionality for users needing quick calculations.
-  
-- **User Interaction:** EVE handles common user commands, including greetings, farewells, and exit commands.
-  
-- **Help Command:** Users can access a detailed help message outlining available commands, ensuring they can make full use of EVE’s features.
-  
-- **Session Management:** EVE allows users to manage their session, including clearing chat history and navigating to login or registration pages.
+---
 
-## System Requirements
-Before getting started with EVE, ensure you meet the following system requirements:
+## 📸 Preview  
 
-- **Python:** Version 3.6 or higher
-- **Dependencies:**
-  - Flask (for web framework)
-  - ChatterBot (for chatbot functionality)
-  - NLTK (Natural Language Toolkit for processing language data)
-  - SymPy (for symbolic mathematics)
-- **Additional Files:**
-  - A `knowledge_base.json` file containing structured health-related training data.
+![HealthBot EVE Interface](https://via.placeholder.com/1024x600.png?text=HealthBot+EVE+User+Interface)  
+*EVE's intuitive interface ensures smooth and effective user interactions.*
 
-## Installation Guide
+---
 
-### Clone the Repository
-Start by cloning the repository to your local machine:
+## 🌟 Features  
+
+### 1. **Health and Wellness Advice**  
+EVE provides expert, evidence-based health tips and answers to health-related queries, empowering users to make better decisions about their well-being.
+
+### 2. **Mathematical Calculations**  
+EVE supports quick evaluations of mathematical expressions, making it an efficient tool for users needing precise calculations.
+
+### 3. **User Interaction Management**  
+Handle common interactions such as:  
+- Greetings and farewells  
+- Command-based navigation  
+- Chat session management, including clearing history  
+
+### 4. **Help Command**  
+A detailed help feature is available, guiding users through EVE's commands and functionalities.
+
+### 5. **Custom Knowledge Base**  
+EVE leverages a structured JSON-based knowledge base to provide targeted and helpful responses.  
+
+---
+
+## 🖥️ System Requirements  
+
+Before setting up, ensure the following are met:  
+
+1. **Python**: Version 3.6 or higher.  
+2. **Dependencies**:  
+   - Flask (web framework)  
+   - ChatterBot (chatbot engine)  
+   - NLTK (natural language processing)  
+   - SymPy (symbolic mathematics)  
+3. **Knowledge Base**:  
+   - `knowledge_base.json`, structured with training data for health-related responses.  
+
+---
+
+## 🛠️ Installation Guide  
+
+Follow these steps to set up EVE on your system:  
+
+### 1. **Clone the Repository**  
 
 ```bash
 git clone https://github.com/your-username/your-repository.git
 cd your-repository
-Set Up a Virtual Environment
-Create a virtual environment to manage dependencies:
+```
 
-bash
-Copy code
+### 2. **Set Up a Virtual Environment**  
+
+```bash
+# Create a virtual environment
 python -m venv venv
-Activate the virtual environment:
 
-On Windows:
-bash
-Copy code
+# Activate the virtual environment
+# On Windows:
 venv\Scripts\activate
-On macOS/Linux:
-bash
-Copy code
+# On macOS/Linux:
 source venv/bin/activate
-Install Dependencies
-Install the required packages by running the following command:
+```
 
-bash
-Copy code
+### 3. **Install Dependencies**  
+
+```bash
 pip install -r requirements.txt
-Ensure that your requirements.txt includes the following libraries:
+```
 
-Copy code
-Flask
-ChatterBot
-nltk
-sympy
-Download NLTK Data
-EVE relies on the NLTK library for natural language processing. Run the following commands to download necessary NLTK data:
+Dependencies in `requirements.txt` include:  
+- Flask  
+- ChatterBot  
+- nltk  
+- sympy  
 
-python
-Copy code
+### 4. **Download NLTK Data**  
+
+Run the following commands in a Python shell:  
+
+```python
 import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('averaged_perceptron_tagger')
-Prepare the Knowledge Base
-Ensure you have a knowledge_base.json file in the root directory of the project. This file should contain structured training data in the following format:
+```
 
-json
-Copy code
+### 5. **Prepare the Knowledge Base**  
+
+Ensure a file named `knowledge_base.json` exists in the root directory. Example structure:  
+
+```json
 {
-    "training_data": [
-        {"question": "What are some tips for staying healthy?", "answer": "Here are some tips..."},
-        {"question": "How can I lose weight?", "answer": "Try these strategies..."}
-    ]
+  "training_data": [
+    {"question": "What are some tips for staying healthy?", "answer": "Eat balanced meals, exercise regularly, and stay hydrated."},
+    {"question": "How can I lose weight?", "answer": "Maintain a calorie deficit through proper diet and exercise."}
+  ]
 }
-Running the Application
-Once everything is set up, run the application with the following command:
+```
 
-bash
-Copy code
+### 6. **Run the Application**  
+
+Start the application using:  
+
+```bash
 python eve.py
-The application will be available at http://localhost:5000.
+```
 
-User Guide
-Welcome to EVE, your personal health and wellness assistant. EVE is designed to help you with health-related questions and provide useful, expert advice on a variety of topics.
+EVE will be available at: [http://localhost:5000](http://localhost:5000).  
 
-Getting Started
-Open the chat interface in your browser at [your chatbot URL] (e.g., http://localhost:5000).
-Type your message in the input box and click "Send" to begin interacting with EVE.
-Basic Commands
-Asking Questions: Type any health-related question directly in the chat, and EVE will respond with information from the knowledge base.
+---
 
-Exiting the Chat: To end the chat session, type any of the following: 'stop', 'exit', 'quit', or 'bye'.
+## 💻 User Guide  
 
-Help Command: Type 'help' to display a list of commands and instructions on how to use EVE.
+### Getting Started  
 
-Special Features
-EVE supports a variety of interactions, including:
+1. Open the chatbot interface in your browser at the provided URL.  
+2. Type your query or command in the input box and press "Send" to interact with EVE.  
 
-Greetings: EVE will respond to common greetings such as "hello", "hi", or "hey".
+### Common Commands  
 
-Farewells: If you want to end the conversation, use phrases like "goodbye", "see you", or "take care".
+- **Ask Questions**: Enter any health-related question, and EVE will respond with expert advice.  
+- **Perform Calculations**: Type mathematical expressions like `3 + 7`, and EVE will evaluate them.  
+- **Exit the Session**: Use commands such as `stop`, `exit`, `quit`, or `bye` to end the session.  
+- **Help**: Type `help` to display a list of available commands.  
 
-Mathematical Queries: EVE can perform basic calculations. Simply enter a mathematical expression (e.g., "2 + 2"), and EVE will evaluate it.
+---
 
-Example Interaction:
-User: "Hi there!"
+### Example Interactions  
 
-EVE: "Hello! How can I assist you today?"
-User: "What are some tips for staying healthy?"
+| **User Input**                  | **EVE Response**                                           |  
+|----------------------------------|-----------------------------------------------------------|  
+| Hi, how are you?                 | Hello! How can I assist you today?                        |  
+| What are some tips for fitness?  | Exercise daily, eat a balanced diet, and get enough sleep.|  
+| What is 12 * 8?                  | The answer is 96.                                         |  
+| bye                              | Goodbye! Stay healthy!                                    |  
 
-EVE: [Provides health tips from knowledge base]
-User: "What is 3 * 5?"
+---
 
-EVE: "15"
-Additional Functions
-Clear Chat History: Click the 'Clear' button to erase the chat history and start fresh.
-Troubleshooting
-If you experience issues with EVE, here are some troubleshooting steps:
+## 🛠️ Troubleshooting  
 
-Check for Typos: Ensure that your question is properly spelled.
-Phrase Your Question Clearly: EVE performs best when queries are clear and concise.
-Internet Connection: Ensure that you have a stable internet connection.
-Developer Information
-Developers:
+If you encounter any issues:  
 
-John Maina Wambui
-Joyita Mithamo Njoki
-Dwayne Masinde Lawrence
-Isaac Maina Muraya
-Version: 1.0
+1. **Check Dependencies**: Ensure all required packages are installed.  
+2. **Correct Spelling**: Verify your input is clear and correctly spelled.  
+3. **Rephrase Queries**: Use alternative phrasing for your questions.  
+4. **Internet Connectivity**: Ensure your device is connected to a stable network.  
 
-Last Updated: July 17, 2024
+---
 
-Contact Information
-For feedback or suggestions, please reach out to us at:
+## 📋 Developer Information  
 
-John Maina Wambui: wambuijonmaina@gmail.com
-Joyita Mithamo Njoki: Joyritanjoki061@gmail.com
-Dwayne Masinde Lawrence: maslawayne@gmail.com
-Isaac Maina Muraya: Isaacmuraya254@gmail.com
-Thank you for using EVE!
+| **Developer**         | **Email**                     |  
+|------------------------|-------------------------------|  
+| John Maina Wambui     | [wambuijonmaina@gmail.com](mailto:wambuijonmaina@gmail.com) |  
+| Joyita Mithamo Njoki  | [Joyritanjoki061@gmail.com](mailto:Joyritanjoki061@gmail.com) |  
+| Dwayne Masinde Lawrence | [maslawayne@gmail.com](mailto:maslawayne@gmail.com) |  
+| Isaac Maina Muraya    | [Isaacmuraya254@gmail.com](mailto:Isaacmuraya254@gmail.com) |  
+
+---
+
+## 📅 Version & Updates  
+
+- **Version**: 1.0  
+- **Last Updated**: November 30, 2024  
+
+---
+
+## 📬 Contact Us  
+
+We value your feedback!  
+For inquiries, suggestions, or technical support, please email any of the developers listed above.  
+
+---
+
+Thank you for choosing **HealthBot EVE**
