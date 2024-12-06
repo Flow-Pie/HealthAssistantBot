@@ -6,7 +6,7 @@ HealthBot EVE is a comprehensive AI-powered chatbot designed to assist with **he
 
 ## 📸 Preview  
 
-![a vibrant and engaging image related to a Health bot AI project](https://drive.google.com/file/d/1mP2Vb3N5bfi3SolY-j5VMmKxPdGTOCe1/view?usp=sharing)
+![a vibrant and engaging image related to a Health bot AI project](EVE Interface.jpg)
 *EVE's intuitive interface ensures smooth and effective user interactions.*
 
 ---
